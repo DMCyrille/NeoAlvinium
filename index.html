@@ -11,3 +11,88 @@
     <p>Ceci est ma première page hébergée gratuitement avec GitHub Pages.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil avec vidéo</title>
+    <style>
+        /* Styles pour la vidéo en fond */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .video-background iframe {
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none; /* Empêche les utilisateurs de cliquer sur la vidéo */
+        }
+        /* Styles pour le contenu par-dessus la vidéo */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 50vh;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Conteneur de la vidéo YouTube en fond -->
+    <div class="video-background">
+        <iframe id="youtube-video" 
+                src="https://www.youtube.com/embed/hQ7zcT64jMA&ab_channel=DMCyrille?autoplay=1&controls=0&mute=1&loop=0&rel=0&showinfo=0&modestbranding=1&playlist=hQ7zcT64jMA&ab_channel=DMCyrille" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Contenu du site (par-dessus la vidéo) -->
+    <div class="content">
+        <h1>Bienvenue sur mon site</h1>
+        <p>Votre message ici</p>
+    </div>
+
+    <script>
+        // Remplace ID_DE_TA_VIDEO par l'ID réel de ta vidéo
+        const videoID = "hQ7zcT64jMA&ab_channel=DMCyrille";
+        const redirectionURL = "https://autre-site.com"; // URL de redirection à la fin
+
+        // Fonction pour vérifier la fin de la vidéo
+        function onYouTubeIframeAPIReady() {
+            const player = new YT.Player("youtube-video", {
+                events: {
+                    "onStateChange": function(event) {
+                        // Lorsque l'état change
+                        if (event.data === YT.PlayerState.ENDED) {
+                            // Redirige vers un autre site quand la vidéo se termine
+                            window.location.href = redirectionURL;
+                        }
+                    }
+                }
+            });
+        }
+
+        // Charger l'API de lecture IFrame YouTube
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
+
+</body>
+</html>
