@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Néo Alvinium</title>
     <link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: 'Stencil Std', sans-serif;
+    background-color: #121212; /* Fond sombre */
+    color: #f0e68c; /* Couleur or blanchie */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #ffd700; /* Or brillant */
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8); /* Effet de lumière */
+}
+
+.subtitle {
+    font-size: 2em;
+    color: #ffe4b5; /* Or clair */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.2em;
+    color: #f5deb3; /* Or blanchâtre */
+    margin-bottom: 20px;
+}
+
+a {
+    color: #ffa500; /* Couleur or-orange pour les liens */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffd700; /* Couleur or brillant sur survol */
+    text-decoration: underline;
+}
+
+.missing {
+    color: #d3d3d3; /* Couleur grisée pour le texte incomplet ou mystère */
+    font-style: italic;
+}
+<style>
 </head>
 <body>
     <div class="container">
@@ -86,7 +140,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil avec vidéo</title>
     <style>
-        /* Styles pour la vidéo en fond */
         .video-background {
             position: fixed;
             top: 0;
@@ -99,9 +152,8 @@
         .video-background iframe {
             width: 100vw;
             height: 100vh;
-            pointer-events: none; /* Empêche les utilisateurs de cliquer sur la vidéo */
+            pointer-events: none;
         }
-        /* Styles pour le contenu par-dessus la vidéo */
         .content {
             position: relative;
             z-index: 1;
@@ -119,7 +171,6 @@
 </head>
 <body>
 
-    <!-- Conteneur de la vidéo YouTube en fond -->
     <div class="video-background">
         <iframe id="youtube-video" 
                 src="https://www.youtube.com/embed/hQ7zcT64jMA&ab_channel=DMCyrille?autoplay=1&controls=0&mute=1&loop=0&rel=0&showinfo=0&modestbranding=1&playlist=hQ7zcT64jMA&ab_channel=DMCyrille" 
@@ -129,25 +180,25 @@
         </iframe>
     </div>
 
-    <!-- Contenu du site (par-dessus la vidéo) -->
+ 
     <div class="content">
         <h1>Bienvenue sur mon site</h1>
         <p>Votre message ici</p>
     </div>
 
     <script>
-        // Remplace ID_DE_TA_VIDEO par l'ID réel de ta vidéo
-        const videoID = "hQ7zcT64jMA&ab_channel=DMCyrille";
-        const redirectionURL = "https://autre-site.com"; // URL de redirection à la fin
 
-        // Fonction pour vérifier la fin de la vidéo
+        const videoID = "hQ7zcT64jMA&ab_channel=DMCyrille";
+        const redirectionURL = "https://autre-site.com";
+
+
         function onYouTubeIframeAPIReady() {
             const player = new YT.Player("youtube-video", {
                 events: {
                     "onStateChange": function(event) {
-                        // Lorsque l'état change
+                        
                         if (event.data === YT.PlayerState.ENDED) {
-                            // Redirige vers un autre site quand la vidéo se termine
+                            
                             window.location.href = redirectionURL;
                         }
                     }
@@ -155,7 +206,7 @@
             });
         }
 
-        // Charger l'API de lecture IFrame YouTube
+        
         const tag = document.createElement("script");
         tag.src = "https://www.youtube.com/iframe_api";
         const firstScriptTag = document.getElementsByTagName("script")[0];
