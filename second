@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Image en Fond</title>
+    <style>
+        /* Appliquer un reset pour harmoniser l'affichage */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif; /* Remplacer par ta police si besoin */
+            color: #fff; /* Couleur du texte principale */
+        }
 
+        /* Style pour l'image de fond */
+        body {
+            background: url('URL_DE_TON_IMAGE.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        /* Conteneur principal */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay sombre pour rendre le texte lisible */
+        }
+
+        /* Style des titres */
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            margin: 0.5em 0;
+        }
+
+        /* Style des paragraphes */
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 0 2em;
+        }
+
+        /* Bouton ou lien */
+        a {
+            text-decoration: none;
+            background-color: #ff5722;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>
+            <h1>Bienvenue dans l'univers d'Énée</h1>
+            <p>Plongez dans les récits épiques et découvrez les mystères intemporels.</p>
+            <a href="#">Découvrir plus</a>
+        </div>
+    </div>
+</body>
+</html>
