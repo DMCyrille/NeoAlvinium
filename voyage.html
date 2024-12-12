@@ -33,7 +33,11 @@
             color: #8b0000; /* Rouge foncé */
             text-align: center;
             text-transform: uppercase;
-            text-shadow: 1px 1px 5px rgba(139, 0, 0, 0.8); /* Effet de lumière */
+            text-shadow:
+            -2px -2px 0 #000000, /* Ombre noire en haut à gauche */
+            2px -2px 0 #000000,  /* Ombre noire en haut à droite */
+            -2px 2px 0 #000000,  /* Ombre noire en bas à gauche */
+            2px 2px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         .subtitle {
@@ -43,13 +47,22 @@
             font-weight: bold;
             margin-top: 30px;
             text-decoration: underline;
-            text-shadow: 1px 1px 3px rgba(165, 42, 42, 0.5); /* Ombre rouge clair */
+            text-shadow:
+            -2px -2px 0 #000000, /* Ombre noire en haut à gauche */
+            2px -2px 0 #000000,  /* Ombre noire en haut à droite */
+            -2px 2px 0 #000000,  /* Ombre noire en bas à gauche */
+            2px 2px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         p {
             font-size: 1em; /* Texte standard */
             color: #f5d1d1; /* Rouge pâle */
             margin-bottom: 20px;
+            text-shadow:
+            -2px -2px 0 #000000, /* Ombre noire en haut à gauche */
+            2px -2px 0 #000000,  /* Ombre noire en haut à droite */
+            -2px 2px 0 #000000,  /* Ombre noire en bas à gauche */
+            2px 2px 0 #000000;   /* Ombre noire en bas à droite */
         }
     </style>
 </head>
