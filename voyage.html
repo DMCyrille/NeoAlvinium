@@ -9,34 +9,35 @@
         /* CSS principal */
         body {
             font-family: 'Stencil Std', sans-serif;
-            background-image: url('URL_DE_TON_IMAGE.jpg'); /* Remplace par l'URL de ton image */
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #121212; /* Fond sombre par défaut */
             color: #f0e68c; /* Couleur or blanchie */
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-image: Voyage image.webp('background.jpg'); /* Image de fond */
+            background-size: cover; /* Adapte l'image à la taille de l'écran */
+            background-position: center; /* Centre l'image */
+            background-attachment: fixed; /* Rend le fond fixe */
         }
+
         .container {
+            position: relative;
+            z-index: 2;
             width: 80%;
             margin: 0 auto;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.6); /* Ajoute un fond semi-transparent pour améliorer la lisibilité */
-            border-radius: 10px;
         }
 
         .title {
-            font-size: 2.5em;
+            font-size: 1.5em; /* Taille légèrement plus grande que le texte */
             color: #ffd700; /* Or brillant */
             text-align: center;
             text-transform: uppercase;
-            text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8);
+            text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8); /* Effet de lumière */
         }
 
         .subtitle {
-            font-size: 2em;
+            font-size: 1.2em; /* Taille proche des paragraphes */
             color: #ffe4b5; /* Or clair */
             text-transform: uppercase;
             font-weight: bold;
@@ -45,19 +46,9 @@
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1em; /* Texte standard */
             color: #f5deb3; /* Or blanchâtre */
             margin-bottom: 20px;
-        }
-
-        a {
-            color: #ffa500; /* Couleur or-orange pour les liens */
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #ffd700; /* Couleur or brillant sur survol */
-            text-decoration: underline;
         }
     </style>
 </head>
