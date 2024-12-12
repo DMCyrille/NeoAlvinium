@@ -1,105 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page avec Image en Fond</title>
+    <title>Néo Alvinium</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Appliquer un reset pour harmoniser l'affichage */
-        body, html {
+        /* CSS principal */
+        body {
+            font-family: 'Stencil Std', sans-serif;
+            background-color: #121212; /* Fond sombre */
+            color: #f0e68c; /* Couleur or blanchie */
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Arial', sans-serif; /* Remplacer par ta police si besoin */
-            color: #fff; /* Couleur du texte principale */
+            line-height: 1.6;
         }
 
-        /* Style pour l'image de fond */
-        body {
-            background: url('URL_DE_TON_IMAGE.jpg') no-repeat center center fixed; 
-            background-size: cover;
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /* Conteneur principal */
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .title {
+            font-size: 2.5em;
+            color: #ffd700; /* Or brillant */
             text-align: center;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay sombre pour rendre le texte lisible */
-        }
-
-        /* Style des titres */
-        h1 {
-            font-size: 3em;
             text-transform: uppercase;
-            margin: 0.5em 0;
+            text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8); /* Effet de lumière */
         }
 
-        /* Style des paragraphes */
+        .subtitle {
+            font-size: 2em;
+            color: #ffe4b5; /* Or clair */
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 30px;
+            text-decoration: underline;
+        }
+
         p {
             font-size: 1.2em;
-            line-height: 1.6;
-            margin: 0 2em;
+            color: #f5deb3; /* Or blanchâtre */
+            margin-bottom: 20px;
         }
 
-        /* Bouton ou lien */
         a {
+            color: #ffa500; /* Couleur or-orange pour les liens */
             text-decoration: none;
-            background-color: #ff5722;
-            padding: 10px 20px;
-            color: white;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
         }
 
         a:hover {
-            background-color: #e64a19;
+            color: #ffd700; /* Couleur or brillant sur survol */
+            text-decoration: underline;
+        }
+
+        .missing {
+            color: #d3d3d3; /* Couleur grisée pour le texte incomplet ou mystère */
+            font-style: italic;
+        }
+
+        /* Styles vidéo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <div>
-            <h1>Bienvenue dans l'univers d'Énée</h1>
-            <p>« Énée, voyageur des siècles, pont entre l’humain et le divin. » – Épopée des Anciens.
-Énée apparaît pour la première fois dans l’Iliade d’Homère comme un valeureux guerrier.
-Mais c’est surtout dans l’Énéide de Virgile que son rôle prend forme.Après la destruction de Troie, il mène un petit groupe de survivants à travers des épreuves divines et des tempêtes pour atteindre l’Italie, où il est destiné à établir la lignée qui fondera Rome.
-Parmi ses arrêts marquants, Carthage reste central, son idylle troublé par les dieux, tisse une tragédie intemporelle, symbole de sacrifice personnel pour accomplir un destin supérieur.
-Au travers de l’Énéide, Énée descend en Enfers pour consulter son père, Anchise.
-Cette descente illustre dans la littérature son rôle de messager entre les vivants et les morts, et renforce son statut de héros élu par les dieux, Mais la vérité est tout autre, cette descente n'était que le début de ses désastreux plans de conquêtes.
+    <!-- Contenu principal -->
+    <div class="container">
+        <h1 class="title">Un voyage au cœur de ses origines</h1>
+     
+        <p>
+            « Énée, voyageur des siècles, pont entre l’humain et le divin. » – Épopée des Anciens.
+            Énée apparaît pour la première fois dans l’Iliade d’Homère comme un valeureux guerrier.
+            Mais c’est surtout dans l’Énéide de Virgile que son rôle prend forme.Après la destruction de Troie, il mène un petit groupe de survivants à travers des épreuves divines et des tempêtes pour atteindre l’Italie, où il est destiné à établir la lignée qui fondera Rome.
+            Parmi ses arrêts marquants, Carthage reste central, son idylle troublé par les dieux, tisse une tragédie intemporelle, symbole de sacrifice personnel pour accomplir un destin supérieur.
+            Au travers de l’Énéide, Énée descend en Enfers pour consulter son père, Anchise.
+            Cette descente illustre dans la littérature son rôle de messager entre les vivants et les morts, et renforce son statut de héros élu par les dieux, Mais la vérité est tout autre, cette descente n'était que le début de ses désastreux plans de conquêtes.
+        </p>
+        <p>
+            « Énée est plus qu’un héros de l’Énéide, il est le ciment des civilisations. » – Chroniques d’Héliodore, auteur antique oublié.
+            Certaines légendes racontent qu’Énée au seins de Carthage aurait guidé et partagé les secrets d’une architecture durable et la vision d’une ville ouverte sur le commerce.
+            Une statue antique retrouvée en 1857, au nord de Tunis, représente un homme portant un écusson marqué du laurier d’Énée.
+            En 334 av. J.-C., un vieux parchemin grec mentionnait un conseiller mystérieux, ils le surnommait « Le Vagabond Lauréats ».
+            Ce dernier aurait suggéré à Alexandre une route, s’allier avec des éléments clés de la culture perse au lieu de les écraser, garantissant ainsi une transition culturelle pacifique après ses conquêtes.
+        </p>
+        <p>
+            « Chaque cathédrale est un poème de pierre, mais chaque poème a ses secrets.» – Manuscrit anonyme de Chartres.
+            En 1144, lors de la construction de la basilique Saint-Denis, des architectes auraient évoqué un homme étrange leur montrant des plans éblouissants de structures en ogive.
+            Certains voûteraient qu’il était un fantôme du passé car il portait une couronne de lauriers.
+            Un artefact retrouvé à Jérusalem, une dague gravée d’écritures latines faisant mention d’un pacte, pacte de servitude éternel, elle aurait été confié à l’ordre en 1119.
+            Ce pacte relaterait qu’Énée aurait été lié à une force divine leur garantissant bénédiction et protection si les Templiers respectaient ses directives.
+        </p>
+        <p>
+            « J’ai rencontré un étranger dont les yeux semblaient contenir les âges. » – Journal de voyage de Christophe Colomb.
+            Plusieurs croquis retrouvés dans les carnets de Vinci incluent un symbole souvent lié à Énée : Le Lauriers.
+            Ce motif figurait originalement sur des plans d’inventions visionnaires comme la machine volante ou l’homme de Vitruve.
+            Christophe Colomb aurait mentionné dans une lettre à la reine Isabelle de Castille un « homme aux lauriers » ayant prédit que le Nouveau Monde changerait le visage de l’Europe, je suppose qu’Énée l’aurait guidé.
+        </p>
+        <p>
+            « Et pourtant, tout ce qu’il aurait pu changer en ces heures sombres…» – Fragment du carnet d’un soldat inconnu.
+            En 1944, après les bombardements de l’abbaye de Monte Cassino, une relique fut découverte parmi les ruines. Cette dernière portait deux inscription latine : 
+            «Vingt sept juillet milles neuf cent quatorze» et «Trente et un Août milles neuf cent quarante cinq».
+            Les experts attribuent cet objet à l’époque antique, mais aucune explication sur sa présence n’a été apportée.
+            Une lettre codée, décryptée en 1998, faite et signer par Énée, mentionne qu’il aurait été « Mettre a exécutions ces plans » pendant cette période, pour ne pas interférer avec les événements cruciaux de l'évolution.
 
-« Énée est plus qu’un héros de l’Énéide, il est le ciment des civilisations. » – Chroniques d’Héliodore, auteur antique oublié.
-Certaines légendes racontent qu’Énée au seins de Carthage aurait guidé et partagé les secrets d’une architecture durable et la vision d’une ville ouverte sur le commerce.
-Une statue antique retrouvée en 1857, au nord de Tunis, représente un homme portant un écusson marqué du laurier d’Énée.
-En 334 av. J.-C., un vieux parchemin grec mentionnait un conseiller mystérieux, ils le surnommait « Le Vagabond Lauréats ».
-Ce dernier aurait suggéré à Alexandre une route, s’allier avec des éléments clés de la culture perse au lieu de les écraser, garantissant ainsi une transition culturelle pacifique après ses conquêtes.
-
-« Chaque cathédrale est un poème de pierre, mais chaque poème a ses secrets.» – Manuscrit anonyme de Chartres.
-En 1144, lors de la construction de la basilique Saint-Denis, des architectes auraient évoqué un homme étrange leur montrant des plans éblouissants de structures en ogive.
-Certains voûteraient qu’il était un fantôme du passé car il portait une couronne de lauriers.
-Un artefact retrouvé à Jérusalem, une dague gravée d’écritures latines faisant mention d’un pacte, pacte de servitude éternel, elle aurait été confié à l’ordre en 1119.
-Ce pacte relaterait qu’Énée aurait été lié à une force divine leur garantissant bénédiction et protection si les Templiers respectaient ses directives.
-
-« J’ai rencontré un étranger dont les yeux semblaient contenir les âges. » – Journal de voyage de Christophe Colomb.
-Plusieurs croquis retrouvés dans les carnets de Vinci incluent un symbole souvent lié à Énée : Le Lauriers.
-Ce motif figurait originalement sur des plans d’inventions visionnaires comme la machine volante ou l’homme de Vitruve.
-Christophe Colomb aurait mentionné dans une lettre à la reine Isabelle de Castille un « homme aux lauriers » ayant prédit que le Nouveau Monde changerait le visage de l’Europe, je suppose qu’Énée l’aurait guidé.
-
-« Et pourtant, tout ce qu’il aurait pu changer en ces heures sombres…» – Fragment du carnet d’un soldat inconnu.
-En 1944, après les bombardements de l’abbaye de Monte Cassino, une relique fut découverte parmi les ruines. Cette dernière portait deux inscription latine : 
-«Vingt sept juillet milles neuf cent quatorze» et «Trente et un Août milles neuf cent quarante cinq».
-Les experts attribuent cet objet à l’époque antique, mais aucune explication sur sa présence n’a été apportée.
-Une lettre codée, décryptée en 1998, faite et signer par Énée, mentionne qu’il aurait été « Mettre a exécutions ces plans » pendant cette période, pour ne pas interférer avec les événements cruciaux de l'évolution.
-
-« Chaque époque connait un tournant majeur dans l'évolution humaine, et parfois, un seul et même homme semble en être la clé. » – Extrait d’un article du journal.
-De Salvador Dalí à David Lynch, certains artistes auraient inséré des symboles évoquant Énée dans leurs œuvres, de manière plus ou moins cachée.
-Des témoignages étranges remontent des quatre coins du globe récemment, racontant des étrangers à l’allure intemporelle prononçant des phrases prophétiques.
-L'événement le plus récent, datée de 2024, sur ma chaine, chez moi, dans ma vie..</p>
-            <a href="#">Découvrir plus</a>
-        </div>
+            « Chaque époque connait un tournant majeur dans l'évolution humaine, et parfois, un seul et même homme semble en être la clé. » – Extrait d’un article du journal.
+            De Salvador Dalí à David Lynch, certains artistes auraient inséré des symboles évoquant Énée dans leurs œuvres, de manière plus ou moins cachée.
+            Des témoignages étranges remontent des quatre coins du globe récemment, racontant des étrangers à l’allure intemporelle prononçant des phrases prophétiques.
+            L'événement le plus récent, datée de 2024, sur ma chaine, chez moi, dans ma vie..
+        </p>
     </div>
+
+    <!-- Script pour la redirection -->
+    <script>
+        const redirectionURL = "https://autre-site.com";
+
+        function onYouTubeIframeAPIReady() {
+            const player = new YT.Player("youtube-video", {
+                events: {
+                    "onStateChange": function(event) {
+                        if (event.data === YT.PlayerState.ENDED) {
+                            window.location.href = redirectionURL;
+                        }
+                    }
+                }
+            });
+        }
+
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.getElementsByTagName("head")[0].appendChild(tag);
+    </script>
 </body>
 </html>
