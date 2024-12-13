@@ -29,7 +29,11 @@
             color: #ffd700; /* Or brillant */
             text-align: center;
             text-transform: uppercase;
-            text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8); /* Effet de lumière */
+            text-shadow:
+        -1px -1px 0 #000000, /* Ombre noire en haut à gauche */
+        1px -1px 0 #000000,  /* Ombre noire en haut à droite */
+        -1px 1px 0 #000000,  /* Ombre noire en bas à gauche */
+        1px 1px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         .subtitle {
@@ -39,22 +43,42 @@
             font-weight: bold;
             margin-top: 30px;
             text-decoration: underline;
+            text-shadow:
+        -1px -1px 0 #000000, /* Ombre noire en haut à gauche */
+        1px -1px 0 #000000,  /* Ombre noire en haut à droite */
+        -1px 1px 0 #000000,  /* Ombre noire en bas à gauche */
+        1px 1px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         p {
             font-size: 1.2em;
             color: #f5deb3; /* Or blanchâtre */
             margin-bottom: 20px;
+            text-shadow:
+        -1px -1px 0 #000000, /* Ombre noire en haut à gauche */
+        1px -1px 0 #000000,  /* Ombre noire en haut à droite */
+        -1px 1px 0 #000000,  /* Ombre noire en bas à gauche */
+        1px 1px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         a {
             color: #ffa500; /* Couleur or-orange pour les liens */
             text-decoration: none;
+            text-shadow:
+        -1px -1px 0 #000000, /* Ombre noire en haut à gauche */
+        1px -1px 0 #000000,  /* Ombre noire en haut à droite */
+        -1px 1px 0 #000000,  /* Ombre noire en bas à gauche */
+        1px 1px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         a:hover {
             color: #ffd700; /* Couleur or brillant sur survol */
             text-decoration: underline;
+            text-shadow:
+        -1px -1px 0 #000000, /* Ombre noire en haut à gauche */
+        1px -1px 0 #000000,  /* Ombre noire en haut à droite */
+        -1px 1px 0 #000000,  /* Ombre noire en bas à gauche */
+        1px 1px 0 #000000;   /* Ombre noire en bas à droite */
         }
 
         .missing {
